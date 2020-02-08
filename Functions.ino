@@ -116,6 +116,8 @@ void setPen(){
 		cmd = atoi(arg);
 		switch (cmd) {
 			case 0:
+				//analogWrite(laserPin,laserOFF);
+       digitalWrite(laserPin, LOW); 
 				penServo.write(penUpPos);
 				penState=penUpPos;
 				break;
@@ -123,6 +125,8 @@ void setPen(){
 			case 1:
 				penServo.write(penDownPos);
 				penState=penDownPos;
+				//analogWrite(laserPin,laserON); 
+       digitalWrite(laserPin, HIGH); 
 				break;
 
 			default:
@@ -166,9 +170,13 @@ void doTogglePen() {
 	if (penState==penUpPos) {
 		penServo.write(penDownPos);
 		penState=penDownPos;
+		//analogWrite(laserPin,laserON);
+		digitalWrite(laserPin, HIGH); 
 	} else   {
 		penServo.write(penUpPos);
 		penState=penUpPos;
+		//analogWrite(laserPin,laserOFF);
+		digitalWrite(laserPin, LOW);
 	}
 }
 

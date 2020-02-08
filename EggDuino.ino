@@ -39,6 +39,8 @@
 
 #define servoPin 4 //Servo
 
+#define laserPin 11
+
 // EXTRAFEATURES - UNCOMMENT TO USE THEM -------------------------------------------------------------------
 
 // #define prgButton 2 // PRG button
@@ -66,6 +68,8 @@ SerialCommand SCmd;
 	Button motorsToggle(motorsButton, toggleMotors);
 #endif
 // Variables... be careful, by messing around here, everything has a reason and crossrelations...
+uint8_t laserON=90;
+uint8_t laserOFF=2;
 int penMin=0;
 int penMax=0;
 int penUpPos=5;  //can be overwritten from EBB-Command SC

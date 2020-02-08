@@ -1,3 +1,9 @@
+Fork to support a 1.000mw Laserdiode:
+I added a laserpin (Arduino Pin 11), which ist set as OUTPUT and on digital low signal when the "Pen" is raised and on high when the "PEN" is lowered. The Signal ist used to switch a relay. As alternativ the idea to set a PWM Signal via analog write command is implemented as well bout outcommented. On the ardunio CNC shield pin 11 is wired to the Z-Endstop.  
+Tested with Inkscape 0.92.4 https://inkscape.org/ and EggBot Inkscape Plugin Software: Version 2.8.1 https://github.com/evil-mad/EggBot/releases/
+
+=======
+
 Eggduino
 ====
 

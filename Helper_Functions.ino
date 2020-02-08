@@ -3,7 +3,9 @@ void initHardware(){
 	SPMCSR &= ~SELFPRGEN;
 
 	loadPenPosFromEE();
-
+	pinMode(laserPin, OUTPUT);
+  	//analogWrite(laserPin,laserOFF);
+    digitalWrite(laserPin, LOW);
 	pinMode(enableRotMotor, OUTPUT);
 	pinMode(enablePenMotor, OUTPUT);
 
